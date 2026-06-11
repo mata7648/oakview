@@ -207,15 +207,35 @@
       overflow: hidden;
       background: #000;
       margin-bottom: 8px;
-      display: flex;
-      justify-content: center;
+      aspect-ratio: 16/9;
+      position: relative;
     }
-    .video-wrap iframe {
+    .video-wrap img {
       width: 100%;
-      max-width: 360px;
-      aspect-ratio: 9/16;
-      border: none;
+      height: 100%;
+      object-fit: cover;
       display: block;
+    }
+    .video-wrap .yt-play {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      background: rgba(0,0,0,.35);
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .video-wrap .yt-play:hover { background: rgba(0,0,0,.5); }
+    .video-wrap .yt-play svg { filter: drop-shadow(0 2px 8px rgba(0,0,0,.4)); }
+    .video-wrap .yt-play span {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: .03em;
+      text-shadow: 0 1px 4px rgba(0,0,0,.6);
     }
     .video-thumb {
       position: relative;
@@ -459,16 +479,16 @@
 
   <!-- VIDEO TOUR -->
   <div class="section-title">Master Bedroom Video Tour</div>
-  <a class="video-thumb" href="https://youtube.com/shorts/Fo2ajNTO2gE" target="_blank">
-    <img src="https://img.youtube.com/vi/Fo2ajNTO2gE/hqdefault.jpg" alt="Video tour thumbnail" />
-    <div class="play-btn">
-      <svg viewBox="0 0 68 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <div class="video-wrap">
+    <img src="https://img.youtube.com/vi/tPUBVQ5lf90/maxresdefault.jpg" alt="Video tour preview" />
+    <a class="yt-play" href="https://youtu.be/tPUBVQ5lf90" target="_blank">
+      <svg width="68" height="48" viewBox="0 0 68 48" fill="none">
         <rect width="68" height="48" rx="10" fill="#FF0000"/>
         <path d="M45 24L28 34V14L45 24Z" fill="white"/>
       </svg>
-      <span>Watch Video Tour on YouTube</span>
-    </div>
-  </a>
+      <span>Watch on YouTube</span>
+    </a>
+  </div>
 
   <!-- GALLERY -->
   <div class="section-title">Photos</div>
