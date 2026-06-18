@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Master Bedroom for Rent – 4229 Oakview Pl, Saanich BC</title>
+  <title>4229 Oakview Pl – Saanich, BC</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -14,345 +14,167 @@
     }
 
     /* ── HERO ── */
-    .hero {
-      position: relative;
-      height: 70vh;
-      min-height: 420px;
-      overflow: hidden;
-    }
-    .hero img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 60%;
-    }
+    .hero { position: relative; height: 75vh; min-height: 460px; overflow: hidden; }
+    .hero img { width: 100%; height: 100%; object-fit: cover; object-position: center 55%; }
     .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(0,0,0,.15) 0%, rgba(0,0,0,.55) 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 48px 40px;
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,.1) 0%, rgba(0,0,0,.6) 100%);
+      display: flex; flex-direction: column; justify-content: flex-end; padding: 52px 44px;
+    }
+    .hero-overlay .eyebrow {
+      color: rgba(255,255,255,.7);
+      font-size: .85rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
     }
     .hero-overlay h1 {
-      color: #fff;
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      font-weight: 700;
-      line-height: 1.15;
-      text-shadow: 0 2px 8px rgba(0,0,0,.4);
-    }
-    .hero-overlay .price-tag {
-      display: inline-block;
-      margin-top: 14px;
-      background: #c8762b;
-      color: #fff;
-      font-size: 1.35rem;
-      font-weight: 700;
-      padding: 8px 22px;
-      border-radius: 6px;
-      letter-spacing: .02em;
+      color: #fff; font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 700; line-height: 1.1; text-shadow: 0 2px 10px rgba(0,0,0,.4);
     }
     .hero-overlay .location {
-      color: rgba(255,255,255,.85);
-      font-size: 1rem;
-      margin-top: 8px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
+      color: rgba(255,255,255,.8); font-size: 1rem; margin-top: 10px;
+      display: flex; align-items: center; gap: 6px;
     }
 
     /* ── LAYOUT ── */
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+    .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
 
     /* ── BADGES ── */
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 28px 0 8px;
-    }
+    .badges { display: flex; flex-wrap: wrap; gap: 10px; padding: 28px 0 8px; }
     .badge {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 24px;
-      padding: 7px 18px;
-      font-size: .9rem;
-      display: flex;
-      align-items: center;
-      gap: 7px;
+      background: #fff; border: 1px solid #ddd; border-radius: 24px; padding: 7px 18px;
+      font-size: .9rem; display: flex; align-items: center; gap: 7px;
       box-shadow: 0 1px 3px rgba(0,0,0,.07);
     }
     .badge svg { flex-shrink: 0; }
 
     /* ── SECTION TITLES ── */
     .section-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin: 36px 0 16px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #e8e0d6;
-      color: #3a2f24;
+      font-size: 1.25rem; font-weight: 700; margin: 36px 0 16px;
+      padding-bottom: 8px; border-bottom: 2px solid #e8e0d6; color: #3a2f24;
     }
 
     /* ── ABOUT ── */
-    .about p {
-      line-height: 1.75;
-      color: #444;
-      font-size: 1rem;
-    }
+    .about p { line-height: 1.8; color: #444; font-size: 1rem; }
 
-    /* ── DETAILS GRID ── */
-    .details-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 14px;
-      margin-bottom: 8px;
+    /* ── HIGHLIGHTS GRID ── */
+    .highlights {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px; margin-bottom: 8px;
     }
-    .detail-card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 18px;
-      box-shadow: 0 1px 4px rgba(0,0,0,.08);
+    .highlight-card {
+      background: #fff; border-radius: 10px; padding: 20px 18px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.08); display: flex; align-items: flex-start; gap: 12px;
     }
-    .detail-card .label {
-      font-size: .78rem;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      color: #888;
-      margin-bottom: 4px;
+    .highlight-card svg { flex-shrink: 0; margin-top: 2px; }
+    .highlight-card .hc-text .hc-label {
+      font-size: .78rem; text-transform: uppercase; letter-spacing: .06em;
+      color: #888; margin-bottom: 3px;
     }
-    .detail-card .value {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #2d2d2d;
-    }
+    .highlight-card .hc-text .hc-value { font-size: .95rem; font-weight: 600; color: #2d2d2d; }
 
     /* ── GALLERY ── */
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin-bottom: 8px;
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 8px;
     }
-    @media (max-width: 700px) {
-      .gallery { grid-template-columns: repeat(2, 1fr); }
-    }
+    @media (max-width: 700px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
     .gallery figure {
-      margin: 0;
-      cursor: pointer;
-      border-radius: 8px;
-      overflow: hidden;
-      background: #1a1a1a;
-      position: relative;
+      margin: 0; cursor: pointer; border-radius: 8px; overflow: hidden;
+      background: #1a1a1a; position: relative;
     }
     .gallery figure:hover figcaption { opacity: 1; }
     .gallery figure img {
-      width: 100%;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      display: block;
+      width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block;
       transition: transform .25s, opacity .25s;
     }
     .gallery figure:hover img { transform: scale(1.03); opacity: .85; }
     .gallery figure figcaption {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      background: rgba(0,0,0,.55);
-      color: #fff;
-      font-size: .78rem;
-      font-weight: 500;
-      text-align: center;
-      padding: 6px 8px;
-      letter-spacing: .03em;
-      opacity: 0;
-      transition: opacity .2s;
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: rgba(0,0,0,.55); color: #fff; font-size: .78rem; font-weight: 500;
+      text-align: center; padding: 6px 8px; letter-spacing: .03em;
+      opacity: 0; transition: opacity .2s;
     }
 
     /* ── LIGHTBOX ── */
     #lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,.88);
-      z-index: 999;
-      align-items: center;
-      justify-content: center;
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,.88); z-index: 999; align-items: center; justify-content: center;
     }
     #lightbox.open { display: flex; }
     #lightbox img {
-      max-width: 90vw;
-      max-height: 88vh;
-      border-radius: 6px;
+      max-width: 90vw; max-height: 88vh; border-radius: 6px;
       box-shadow: 0 8px 40px rgba(0,0,0,.5);
     }
     #lightbox-close {
-      position: absolute;
-      top: 20px; right: 24px;
-      color: #fff;
-      font-size: 2rem;
-      cursor: pointer;
-      line-height: 1;
-      background: none;
-      border: none;
+      position: absolute; top: 20px; right: 24px; color: #fff;
+      font-size: 2rem; cursor: pointer; line-height: 1; background: none; border: none;
     }
-
-    /* ── VIDEO ── */
-    .video-wrap {
-      border-radius: 10px;
-      overflow: hidden;
-      background: #000;
-      margin-bottom: 8px;
-      aspect-ratio: 16/9;
-      position: relative;
-    }
-    .video-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .video-wrap .yt-play {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      background: rgba(0,0,0,.35);
-      text-decoration: none;
-      transition: background .2s;
-    }
-    .video-wrap .yt-play:hover { background: rgba(0,0,0,.5); }
-    .video-wrap .yt-play svg { filter: drop-shadow(0 2px 8px rgba(0,0,0,.4)); }
-    .video-wrap .yt-play span {
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 600;
-      letter-spacing: .03em;
-      text-shadow: 0 1px 4px rgba(0,0,0,.6);
-    }
-    .video-thumb {
-      position: relative;
-      max-width: 360px;
-      width: 100%;
-      aspect-ratio: 9/16;
-      border-radius: 10px;
-      overflow: hidden;
-      cursor: pointer;
-      display: block;
-      margin: 0 auto;
-    }
-    .video-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .video-thumb .play-btn {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: rgba(0,0,0,.38);
-      gap: 12px;
-      transition: background .2s;
-    }
-    .video-thumb:hover .play-btn { background: rgba(0,0,0,.5); }
-    .video-thumb .play-btn svg {
-      width: 64px; height: 64px;
-      filter: drop-shadow(0 2px 8px rgba(0,0,0,.5));
-    }
-    .video-thumb .play-btn span {
-      color: #fff;
-      font-size: .95rem;
-      font-weight: 600;
-      letter-spacing: .03em;
-      text-shadow: 0 1px 4px rgba(0,0,0,.6);
-    }
-
-    /* ── CONTACT ── */
-    .contact-box {
-      background: #3a2f24;
-      color: #fff;
-      border-radius: 12px;
-      padding: 36px;
-      text-align: center;
-      margin: 40px 0 60px;
-    }
-    .contact-box h2 { font-size: 1.5rem; margin-bottom: 8px; }
-    .contact-box p { color: rgba(255,255,255,.75); margin-bottom: 22px; font-size: .95rem; }
-    .contact-box a.btn {
-      display: inline-block;
-      background: #c8762b;
-      color: #fff;
-      text-decoration: none;
-      padding: 13px 34px;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 600;
-      letter-spacing: .02em;
-      transition: background .2s;
-    }
-    .contact-box a.btn:hover { background: #b0661f; }
 
     /* ── MAP ── */
     .map-wrap {
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 8px;
+      border-radius: 12px; overflow: hidden; margin-bottom: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,.12);
     }
-    .map-wrap iframe {
-      width: 100%;
-      height: 260px;
-      border: none;
-      display: block;
-    }
+    .map-wrap iframe { width: 100%; height: 260px; border: none; display: block; }
     .map-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: #c8762b;
-      text-decoration: none;
-      font-size: .9rem;
-      font-weight: 500;
-      margin-top: 8px;
+      display: inline-flex; align-items: center; gap: 6px; color: #c8762b;
+      text-decoration: none; font-size: .9rem; font-weight: 500; margin-top: 8px;
     }
     .map-link:hover { text-decoration: underline; }
 
-    /* ── CONTACT BUTTONS ── */
-    .contact-btns {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
+    /* ── MEMBER LINK ── */
+    .member-link-wrap {
+      text-align: center;
+      padding: 16px 0 52px;
     }
-    .contact-box a.btn-secondary {
-      display: inline-block;
-      background: transparent;
-      color: #fff;
-      text-decoration: none;
-      padding: 13px 34px;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 600;
-      letter-spacing: .02em;
-      border: 2px solid rgba(255,255,255,.5);
-      transition: border-color .2s, background .2s;
+    .member-link-wrap button {
+      background: none; border: none; color: #c0b8af; font-size: .82rem; cursor: pointer;
+      display: inline-flex; align-items: center; gap: 5px; transition: color .2s;
     }
-    .contact-box a.btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+    .member-link-wrap button:hover { color: #888; }
+
+    /* ── LOGIN MODAL ── */
+    #login-modal {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,.6); z-index: 1000;
+      align-items: center; justify-content: center;
+    }
+    #login-modal.open { display: flex; }
+    .login-card {
+      background: #fff; border-radius: 14px; padding: 40px 36px;
+      width: 100%; max-width: 380px;
+      box-shadow: 0 12px 48px rgba(0,0,0,.25); position: relative;
+    }
+    .login-card h3 { font-size: 1.3rem; color: #3a2f24; margin-bottom: 6px; }
+    .login-card .login-sub { font-size: .9rem; color: #888; margin-bottom: 24px; }
+    .login-card label {
+      display: block; font-size: .82rem; font-weight: 600; color: #555;
+      margin-bottom: 6px; letter-spacing: .04em; text-transform: uppercase;
+    }
+    .login-card input[type="password"] {
+      width: 100%; padding: 11px 14px; border: 1.5px solid #ddd; border-radius: 8px;
+      font-size: 1rem; outline: none; transition: border-color .2s; box-sizing: border-box;
+    }
+    .login-card input[type="password"]:focus { border-color: #c8762b; }
+    .login-card .login-error {
+      color: #c0392b; font-size: .85rem; margin-top: 8px; min-height: 20px;
+    }
+    .login-card .btn-login {
+      display: block; width: 100%; margin-top: 20px; background: #c8762b;
+      color: #fff; border: none; border-radius: 8px; padding: 13px;
+      font-size: 1rem; font-weight: 600; cursor: pointer; transition: background .2s;
+    }
+    .login-card .btn-login:hover { background: #b0661f; }
+    #login-close {
+      position: absolute; top: 14px; right: 18px; background: none;
+      border: none; font-size: 1.4rem; color: #aaa; cursor: pointer; line-height: 1;
+    }
+    #login-close:hover { color: #555; }
 
     @media (max-width: 600px) {
-      .hero-overlay { padding: 28px 20px; }
-      .contact-box { padding: 28px 20px; }
+      .hero-overlay { padding: 32px 20px; }
+      .login-card { padding: 32px 20px; margin: 0 16px; }
     }
   </style>
 </head>
@@ -362,11 +184,11 @@
 <div class="hero">
   <img src="IMG_0273.JPG" alt="4229 Oakview Pl – front of house" />
   <div class="hero-overlay">
-    <h1>Master Bedroom for Rent<br>in Beautiful Saanich Home</h1>
-    <span class="price-tag">$1,200 / month</span>
+    <div class="eyebrow">Saanich, BC</div>
+    <h1>4229 Oakview Pl</h1>
     <div class="location">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      4229 Oakview Pl, Saanich, BC
+      4229 Oakview Pl, Saanich, BC, Canada
     </div>
   </div>
 </div>
@@ -377,117 +199,77 @@
   <!-- BADGES -->
   <div class="badges">
     <div class="badge">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/></svg>
-      WiFi Included
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      4-Bedroom Home
     </div>
     <div class="badge">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      Laundry Access
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      Quiet Street
     </div>
     <div class="badge">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><path d="M3 3h18v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3z"/><path d="M7 21h10M12 18v3"/></svg>
-      Shared Kitchen
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Friendly Household
     </div>
     <div class="badge">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><path d="M4 12h16M4 12a8 8 0 0 0 16 0M9 12V6a3 3 0 0 1 6 0v6"/></svg>
-      In-Suite Bathroom
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/></svg>
+      Near Saanich Rec Centre
     </div>
     <div class="badge">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-      Available Aug 1
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      Close to UVic
+    </div>
+    <div class="badge">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><path d="M3 9a3 3 0 1 0 6 0 3 3 0 0 0-6 0z"/><path d="M9 9h12M3 15h12M15 15a3 3 0 1 0 6 0 3 3 0 0 0-6 0z"/></svg>
+      Private Backyard
     </div>
   </div>
 
   <!-- ABOUT -->
   <div class="about">
-    <div class="section-title">About This Room</div>
+    <div class="section-title">About the Property</div>
     <p>
-      This is a master bedroom for rent in a friendly household in Saanich. The room is upstairs
-      and has its own private bathroom with a hot tub.
+      A well-maintained 4-bedroom home on a quiet residential street in Saanich.
+      The main floor features a spacious open-plan kitchen with island, a comfortable living room,
+      and a dining area with access to the back deck and yard.
     </p>
     <p style="margin-top:12px;">
-      The house has 4 bedrooms. The other 3 are occupied by female UVic students, so it's a calm and
-      tidy place to live. Everyone gets along well and respects each other's space.
+      The property backs onto a green space, offering a private and peaceful outdoor area.
+      It's a friendly, tidy household — currently home to UVic students — just walking distance
+      to the Saanich Recreation Centre, close to parks, and with easy transit to UVic.
     </p>
     <p style="margin-top:12px;">
-      The kitchen, living room, dining room, and laundry are shared. WiFi is included. Utilities like
-      hydro and water are split evenly — around $40/month each. There are two cats in the house.
-      The house is in a great spot — quiet street, walking distance to the Saanich Recreation Centre,
-      close to parks, and easy to get to UVic.
+      Shared amenities include the kitchen, living and dining rooms, in-suite laundry, and WiFi.
+      Two friendly cats are part of the household.
     </p>
   </div>
 
-  <!-- DETAILS -->
-  <div class="section-title">Details</div>
-  <div class="details-grid">
-    <div class="detail-card">
-      <div class="label">Monthly Rent</div>
-      <div class="value">$1,200</div>
+  <!-- HIGHLIGHTS -->
+  <div class="section-title">Property Highlights</div>
+  <div class="highlights">
+    <div class="highlight-card">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/></svg>
+      <div class="hc-text"><div class="hc-label">Internet</div><div class="hc-value">WiFi Included</div></div>
     </div>
-    <div class="detail-card">
-      <div class="label">Room Type</div>
-      <div class="value">Master Bedroom</div>
+    <div class="highlight-card">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <div class="hc-text"><div class="hc-label">Laundry</div><div class="hc-value">In-Suite Access</div></div>
     </div>
-    <div class="detail-card">
-      <div class="label">Included</div>
-      <div class="value">WiFi · Laundry</div>
+    <div class="highlight-card">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><path d="M3 3h18v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3z"/><path d="M7 21h10M12 18v3"/></svg>
+      <div class="hc-text"><div class="hc-label">Kitchen</div><div class="hc-value">Modern with Island</div></div>
     </div>
-    <div class="detail-card">
-      <div class="label">Utilities</div>
-      <div class="value">Shared (~$40/mo)</div>
+    <div class="highlight-card">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      <div class="hc-text"><div class="hc-label">Bedrooms</div><div class="hc-value">4 Total</div></div>
     </div>
-    <div class="detail-card">
-      <div class="label">Pets</div>
-      <div class="value">Cats Friendly 🐱</div>
+    <div class="highlight-card">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/></svg>
+      <div class="hc-text"><div class="hc-label">Backyard</div><div class="hc-value">Park View</div></div>
     </div>
-    <div class="detail-card">
-      <div class="label">Bathroom</div>
-      <div class="value">In-Suite + Hot Tub</div>
+    <div class="highlight-card">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      <div class="hc-text"><div class="hc-label">Parking</div><div class="hc-value">Street Parking</div></div>
     </div>
-    <div class="detail-card">
-      <div class="label">Kitchen</div>
-      <div class="value">Shared</div>
-    </div>
-    <div class="detail-card">
-      <div class="label">Parking</div>
-      <div class="value">Street Parking</div>
-    </div>
-    <div class="detail-card">
-      <div class="label">Available</div>
-      <div class="value">August 1, 2026</div>
-    </div>
-    <div class="detail-card">
-      <div class="label">Location</div>
-      <div class="value">Saanich, BC</div>
-    </div>
-  </div>
-
-  <!-- MAP -->
-  <div class="section-title">Location</div>
-  <div class="map-wrap">
-    <iframe
-      src="https://maps.google.com/maps?q=4229+Oakview+Pl,+Saanich,+BC,+Canada&output=embed&z=15"
-      allowfullscreen
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-  <a class="map-link" href="https://maps.google.com/?q=4229+Oakview+Pl+Saanich+BC" target="_blank">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-    Open in Google Maps
-  </a>
-
-  <!-- VIDEO TOUR -->
-  <div class="section-title">Master Bedroom Video Tour</div>
-  <div class="video-wrap">
-    <img src="https://img.youtube.com/vi/tPUBVQ5lf90/maxresdefault.jpg" alt="Video tour preview" />
-    <a class="yt-play" href="https://youtu.be/tPUBVQ5lf90" target="_blank">
-      <svg width="68" height="48" viewBox="0 0 68 48" fill="none">
-        <rect width="68" height="48" rx="10" fill="#FF0000"/>
-        <path d="M45 24L28 34V14L45 24Z" fill="white"/>
-      </svg>
-      <span>Watch on YouTube</span>
-    </a>
   </div>
 
   <!-- GALLERY -->
@@ -517,25 +299,50 @@
       <img src="978981_20.jpg" alt="Kitchen – Island View" />
       <figcaption>Kitchen – Island View</figcaption>
     </figure>
-    <figure onclick="openLightbox('978981_35.jpg')">
-      <img src="978981_35.jpg" alt="Laundry Room" />
-      <figcaption>Laundry Room</figcaption>
-    </figure>
     <figure onclick="openLightbox('978981_40.jpg')">
       <img src="978981_40.jpg" alt="Backyard – Park View" />
       <figcaption>Backyard – Park View</figcaption>
     </figure>
+    <figure onclick="openLightbox('978981_35.jpg')">
+      <img src="978981_35.jpg" alt="Laundry Room" />
+      <figcaption>Laundry Room</figcaption>
+    </figure>
   </div>
 
-  <!-- CONTACT -->
-  <div class="contact-box">
-    <h2>Interested? Get in Touch</h2>
-    <p>Call or text, or send an email to arrange a viewing.</p>
-    <div class="contact-btns">
-      <a class="btn" href="mailto:limata@gmail.com?subject=Inquiry%20–%204229%20Oakview%20Pl%20Master%20Bedroom">✉ Email Us</a>
-    </div>
+  <!-- MAP -->
+  <div class="section-title">Location</div>
+  <div class="map-wrap">
+    <iframe
+      src="https://maps.google.com/maps?q=4229+Oakview+Pl,+Saanich,+BC,+Canada&output=embed&z=15"
+      allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </div>
+  <a class="map-link" href="https://maps.google.com/?q=4229+Oakview+Pl+Saanich+BC" target="_blank">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    Open in Google Maps
+  </a>
 
+</div>
+
+<!-- MEMBER LOGIN LINK -->
+<div class="member-link-wrap">
+  <button onclick="document.getElementById('login-modal').classList.add('open')">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    Member login
+  </button>
+</div>
+
+<!-- LOGIN MODAL -->
+<div id="login-modal">
+  <div class="login-card">
+    <button id="login-close" onclick="document.getElementById('login-modal').classList.remove('open')">✕</button>
+    <h3>Members Login</h3>
+    <div class="login-sub">Enter the password to view the rental listing.</div>
+    <label for="pw-input">Password</label>
+    <input type="password" id="pw-input" placeholder="Enter password" autocomplete="current-password" />
+    <div class="login-error" id="login-error"></div>
+    <button class="btn-login" onclick="handleLogin()">Sign In</button>
+  </div>
 </div>
 
 <!-- LIGHTBOX -->
@@ -545,6 +352,32 @@
 </div>
 
 <script>
+  // Redirect straight to rental page if already authenticated
+  if (sessionStorage.getItem('member') === '1') window.location.replace('members.html');
+
+  // SHA-256 of "oakview2026" — replace this hash to change the password
+  const PASSWORD_HASH = '60100f7b5475f4e03dcfff3a176e2fdf856937b6fd31b66c6568fdc56fb9eb51';
+
+  async function sha256(str) {
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+  }
+
+  async function handleLogin() {
+    const input = document.getElementById('pw-input').value;
+    const hash = await sha256(input);
+    if (hash === PASSWORD_HASH) {
+      sessionStorage.setItem('member', '1');
+      window.location.href = 'members.html';
+    } else {
+      document.getElementById('login-error').textContent = 'Incorrect password. Please try again.';
+    }
+  }
+
+  document.getElementById('pw-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') handleLogin();
+  });
+
   function openLightbox(src) {
     document.getElementById('lightbox-img').src = src;
     document.getElementById('lightbox').classList.add('open');
@@ -552,7 +385,12 @@
   function closeLightbox() {
     document.getElementById('lightbox').classList.remove('open');
   }
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeLightbox();
+      document.getElementById('login-modal').classList.remove('open');
+    }
+  });
 </script>
 
 </body>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>if (sessionStorage.getItem('member') !== '1') window.location.replace('index.html');</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Members Area – 4229 Oakview Pl</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: #2d2d2d;
+      background: #f9f7f4;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    .top-nav {
+      background: #3a2f24;
+      padding: 12px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .top-nav .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .top-nav .nav-brand .brand-icon {
+      width: 30px; height: 30px;
+      background: rgba(200,118,43,.25);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .top-nav .nav-brand span {
+      color: rgba(255,255,255,.85);
+      font-size: .92rem;
+      font-weight: 600;
+    }
+    .top-nav .nav-right { display: flex; align-items: center; gap: 16px; }
+    .top-nav .nav-tag {
+      background: rgba(200,118,43,.2);
+      color: #e8a060;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+    .top-nav button {
+      background: none;
+      border: 1px solid rgba(255,255,255,.25);
+      color: rgba(255,255,255,.75);
+      font-size: .82rem;
+      cursor: pointer;
+      padding: 5px 14px;
+      border-radius: 5px;
+      transition: all .2s;
+    }
+    .top-nav button:hover { border-color: #fff; color: #fff; background: rgba(255,255,255,.08); }
+
+    /* ── LAYOUT ── */
+    .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── WELCOME ── */
+    .welcome {
+      padding: 44px 0 8px;
+    }
+    .welcome .welcome-eyebrow {
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: #c8762b;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .welcome h1 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: #3a2f24;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .welcome p {
+      color: #888;
+      margin-top: 8px;
+      font-size: .95rem;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 2px;
+      background: #e8e0d6;
+      margin: 24px 0 32px;
+    }
+
+    /* ── PORTAL GRID ── */
+    .portal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 18px;
+      padding-bottom: 64px;
+    }
+
+    .portal-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 28px 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.07);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow .2s, transform .18s;
+      border: 1.5px solid transparent;
+    }
+    .portal-card:hover {
+      box-shadow: 0 6px 24px rgba(0,0,0,.11);
+      transform: translateY(-3px);
+      border-color: #e8ddd2;
+    }
+    .portal-card.coming-soon {
+      opacity: .65;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .card-icon {
+      width: 46px; height: 46px;
+      background: #f4ede4;
+      border-radius: 11px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 4px;
+    }
+
+    .portal-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #2d2d2d;
+    }
+    .portal-card .card-desc {
+      font-size: .88rem;
+      color: #777;
+      line-height: 1.55;
+      flex: 1;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 6px;
+    }
+    .card-footer .card-link {
+      font-size: .85rem;
+      font-weight: 600;
+      color: #c8762b;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .card-footer .card-status {
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+    .card-footer .status-available {
+      background: #edf7ed;
+      color: #2e7d32;
+    }
+    .card-footer .status-soon {
+      background: #f5f0eb;
+      color: #aaa;
+    }
+
+    @media (max-width: 600px) {
+      .top-nav { padding: 10px 16px; }
+      .top-nav .nav-tag { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="top-nav">
+  <a class="nav-brand" href="index.html">
+    <div class="brand-icon">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    </div>
+    <span>4229 Oakview Pl</span>
+  </a>
+  <div class="nav-right">
+    <span class="nav-tag">Members Area</span>
+    <button onclick="logout()">Log out</button>
+  </div>
+</nav>
+
+<!-- CONTENT -->
+<div class="container">
+
+  <div class="welcome">
+    <div class="welcome-eyebrow">Members Area</div>
+    <h1>Welcome to 4229 Oakview</h1>
+    <p>Private information and documents for household members and prospective tenants.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SECTION CARDS -->
+  <div class="portal-grid">
+
+    <!-- Master Bedroom Rental -->
+    <a class="portal-card" href="rental.html">
+      <div class="card-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <h3>Master Bedroom Rental</h3>
+      <div class="card-desc">Full rental listing — pricing, room details, photos, video tour, and contact information for the master bedroom.</div>
+      <div class="card-footer">
+        <span class="card-link">
+          View listing
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </span>
+        <span class="card-status status-available">Available Aug 1</span>
+      </div>
+    </a>
+
+    <!-- Utility Documents -->
+    <div class="portal-card coming-soon">
+      <div class="card-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      </div>
+      <h3>Utility Documents</h3>
+      <div class="card-desc">Shared utility bills, hydro statements, internet invoices, and related household documents.</div>
+      <div class="card-footer">
+        <span class="card-link" style="color:#bbb">
+          Coming soon
+        </span>
+        <span class="card-status status-soon">Soon</span>
+      </div>
+    </div>
+
+    <!-- Placeholder for future section -->
+    <div class="portal-card coming-soon">
+      <div class="card-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c8762b" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      </div>
+      <h3>House Information</h3>
+      <div class="card-desc">House rules, appliance guides, WiFi details, and other general household information.</div>
+      <div class="card-footer">
+        <span class="card-link" style="color:#bbb">
+          Coming soon
+        </span>
+        <span class="card-status status-soon">Soon</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  if (sessionStorage.getItem('member') !== '1') window.location.replace('index.html');
+
+  function logout() {
+    sessionStorage.removeItem('member');
+    window.location.replace('index.html');
+  }
+</script>
+
+</body>
+</html>
